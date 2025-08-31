@@ -24,8 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+DEBUG = False
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'partnersdb-backend.onrender.com',  # no https://
+    'maxwellpartnerdb.vercel.app'       # frontend domain
+]
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
@@ -79,8 +84,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://maxwellpartnerdb.vercel.app",
+    "https://partnersdb-backend.onrender.com"
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://maxwellpartnerdb.vercel.app",
+    "https://partnersdb-backend.onrender.com"
+]
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
