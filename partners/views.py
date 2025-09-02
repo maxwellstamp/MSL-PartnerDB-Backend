@@ -62,8 +62,11 @@ def upload_excel(request):
         column_mapping = {
             'company name': 'firm_name',
             'company_name': 'firm_name',
+            'firm': 'firm_name',
             'name of organization(firms)': 'firm_name',
             'firm name': 'firm_name',
+            
+            
             'origin': 'hq',
             'headquarters': 'hq',
             'origin': 'hq',
