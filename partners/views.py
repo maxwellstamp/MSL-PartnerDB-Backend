@@ -55,6 +55,8 @@ def upload_excel(request):
         
         # Normalize column names: lowercase, strip spaces
         df.columns = df.columns.str.strip().str.lower()
+        #df.columns = df.columns.str.strip().str.lower().str.replace(r'\u200b', '', regex=True).str.replace(r'\xa0', '', regex=True)
+
         
         # Map common aliases (e.g., 'company name' to 'firm_name', 'headquarters' to 'hq')
         column_mapping = {
@@ -62,11 +64,14 @@ def upload_excel(request):
             'company_name': 'firm_name',
             'name of organization(firms)': 'firm_name',
             'firm name': 'firm_name',
+            'origin': 'hq',
             'headquarters': 'hq',
             'origin': 'hq',
             'focus area': 'focus_area',
             'donor experience': 'donor_experience',
             'contact': 'contact',
+            'email': 'contact',
+            'number': 'contact',
         }
         df = df.rename(columns=column_mapping)
         
@@ -77,7 +82,7 @@ def upload_excel(request):
         processed = 0
         skipped = []
         for index, row in df.iterrows():
-            firm_name = str(row.get('firm_name')).strip().lower()
+            firm_name = str(row.get('firm_name', 'firms', 'firm name')).strip().lower()
             if pd.isna(firm_name) or not firm_name:
                 skipped.append(f"Row {index+2}: Missing firm_name")  # +2 for header and 1-indexing
                 continue
