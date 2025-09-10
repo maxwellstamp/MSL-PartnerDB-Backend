@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django_filters',
     'partners',
     'corsheaders',
+    'import_export',
 
 ]
 
