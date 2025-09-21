@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from partners.views import PartnerViewSet, hq_list, upload_excel, upload_status
+from partners.views import PartnerViewSet, hq_list, upload_excel
 
 router = DefaultRouter()
 router.register(r'partners', PartnerViewSet)
@@ -28,5 +28,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api/hqs/', hq_list),
     path('api/upload-excel/', upload_excel),
-    path('api/upload-status/', upload_status),
+    
 ]
