@@ -62,6 +62,7 @@ def upload_excel(request):
             'focus area': 'focus_area',
             'donor experience': 'donor_experience',
             'contact': 'contact',
+            'sector': 'sector',
             'current partnership status': 'current_partnership_status'
         }
 
@@ -87,6 +88,7 @@ def upload_excel(request):
                 contact = row.get('contact', None)
                 donor_experience = row.get('donor_experience', None)
                 current_partnership_status = row.get('current_partnership_status', None)
+                sector = row.get('sector', None)
 
                 defaults = {}
                 if hq is not None and not pd.isna(hq):
@@ -99,6 +101,8 @@ def upload_excel(request):
                     defaults['donor_experience'] = str(donor_experience).strip()
                 if current_partnership_status is not None and not pd.isna(current_partnership_status):
                     defaults['current_partnership_status'] = str(current_partnership_status).strip()
+                if sector is not None and not pd.isna(sector):
+                    defaults['sector'] = str(sector).strip()
 
                 Partner.objects.update_or_create(
                     firm_name__iexact=firm_name.lower(),
