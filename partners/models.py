@@ -8,6 +8,8 @@ class Partner(models.Model):
     contact = models.CharField(max_length=255, blank=True, null=True)
     donor_experience = models.TextField(blank=True, null=True)
     current_partnership_status = models.CharField(max_length=255, blank=True, null=True)
+    sector = models.CharField(max_length=255, blank=True, null=True)  # NEW: sector of the firm
+
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
