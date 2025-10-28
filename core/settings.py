@@ -29,7 +29,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'partnersdb-backend.onrender.com',  # no https://
-    'maxwellpartnerdb.vercel.app'       # frontend domain
+    'maxwellpartnerdb.vercel.app',       # frontend domain
+    'msl-partnerdb-frontend.web.app'
 ]
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
