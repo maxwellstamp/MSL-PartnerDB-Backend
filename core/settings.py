@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     'partnersdb-backend.onrender.com',  # no https://
     'maxwellpartnerdb.vercel.app',       # frontend domain
     'msl-partnerdb-frontend.web.app',
+    'msl-partnerdb-frontend.firebaseapp.com',
     'msl-partnerdb-backend.onrender.com',
 ]
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -57,16 +58,17 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # ✅ must come early
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",   # ✅ Must be at the very top (after SecurityMiddleware)
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Static files
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
 
 
 ROOT_URLCONF = 'core.urls'
