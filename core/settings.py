@@ -92,6 +92,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://maxwellpartnerdb.vercel.app",
     "https://partnersdb-backend.onrender.com",
     'https://msl-partnerdb-frontend.web.app',
+    'https://msl-partnerdb-frontend.firebaseapp.com',
     'https://msl-partnerdb-backend.onrender.com',
 ]
 
@@ -100,6 +101,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://maxwellpartnerdb.vercel.app",
     "https://partnersdb-backend.onrender.com",
     'https://msl-partnerdb-frontend.web.app',
+    'https://msl-partnerdb-frontend.firebaseapp.com',
     'https://msl-partnerdb-backend.onrender.com',
 ]
 # Database
