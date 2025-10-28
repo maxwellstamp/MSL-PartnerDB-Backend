@@ -30,7 +30,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'partnersdb-backend.onrender.com',  # no https://
     'maxwellpartnerdb.vercel.app',       # frontend domain
-    'msl-partnerdb-frontend.web.app'
+    'msl-partnerdb-frontend.web.app',
+    'msl-partnerdb-backend.onrender.com',
 ]
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -89,13 +90,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "https://maxwellpartnerdb.vercel.app",
-    "https://partnersdb-backend.onrender.com"
+    "https://partnersdb-backend.onrender.com",
+    'https://msl-partnerdb-frontend.web.app',
+    'https://msl-partnerdb-backend.onrender.com',
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://maxwellpartnerdb.vercel.app",
-    "https://partnersdb-backend.onrender.com"
+    "https://partnersdb-backend.onrender.com",
+    'https://msl-partnerdb-frontend.web.app',
+    'https://msl-partnerdb-backend.onrender.com',
 ]
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
