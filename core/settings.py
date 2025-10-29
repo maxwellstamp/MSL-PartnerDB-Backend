@@ -28,8 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'partnersdb-backend.onrender.com',  # no https://
-    'maxwellpartnerdb.vercel.app',       # frontend domain
+    # 'partnersdb-backend.onrender.com',  # no https://
+    # 'maxwellpartnerdb.vercel.app',       # frontend domain
     'msl-partnerdb-frontend.web.app',
     'msl-partnerdb-frontend.firebaseapp.com',
     'msl-partnerdb-backend.onrender.com',
@@ -92,8 +92,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
-    "https://maxwellpartnerdb.vercel.app",
-    "https://partnersdb-backend.onrender.com",
+    # "https://maxwellpartnerdb.vercel.app",
+    # "https://partnersdb-backend.onrender.com",
     'https://msl-partnerdb-frontend.web.app',
     'https://msl-partnerdb-frontend.firebaseapp.com',
     'https://msl-partnerdb-backend.onrender.com',
@@ -101,8 +101,8 @@ CSRF_TRUSTED_ORIGINS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://maxwellpartnerdb.vercel.app",
-    "https://partnersdb-backend.onrender.com",
+    # "https://maxwellpartnerdb.vercel.app",
+    # "https://partnersdb-backend.onrender.com",
     'https://msl-partnerdb-frontend.web.app',
     'https://msl-partnerdb-frontend.firebaseapp.com',
     'https://msl-partnerdb-backend.onrender.com',
