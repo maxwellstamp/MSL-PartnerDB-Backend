@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     # 'partnersdb-backend.onrender.com',  # no https://
     # 'maxwellpartnerdb.vercel.app',       # frontend domain
     'msl-partnerdb-frontend.web.app',
+    'msl-partner-db-frontend.vercel.app',
     'msl-partnerdb-frontend.firebaseapp.com',
     'msl-partnerdb-backend.onrender.com',
 ]
@@ -97,6 +98,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://msl-partnerdb-frontend.web.app',
     'https://msl-partnerdb-frontend.firebaseapp.com',
     'https://msl-partnerdb-backend.onrender.com',
+    'https://msl-partner-db-frontend.vercel.app',
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -106,6 +108,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://msl-partnerdb-frontend.web.app',
     'https://msl-partnerdb-frontend.firebaseapp.com',
     'https://msl-partnerdb-backend.onrender.com',
+    'https://msl-partner-db-frontend.vercel.app',
 ]
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
