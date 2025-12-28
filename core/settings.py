@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'partners',
     'corsheaders',
     'import_export',
+    'partnerSearch.apps.PartnersearchConfig',
 
 ]
 
@@ -190,4 +191,9 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+# Add Gemini API config (read from environment/.env)
+GEMINI_API_KEY = config('GEMINI_API_KEY', default='')
+# optional: override base URL if needed
+# GEMINI_API_URL = config('GEMINI_API_URL', default='')
 

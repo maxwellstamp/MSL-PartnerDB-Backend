@@ -28,5 +28,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api/hqs/', hq_list),
     path('api/upload-excel/', upload_excel),
-    
+    path('api/partner-search/', include('partnerSearch.urls')),
 ]
